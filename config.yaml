@@ -1,0 +1,32 @@
+- name: Valid GET Request (Google homepage)
+  url: https://www.google.com/
+  method: GET
+  headers:
+    user-agent: fetch-synthetic-monitor
+
+- name: Valid POST Request (JSONPlaceholder API)
+  url: https://jsonplaceholder.typicode.com/posts
+  method: POST
+  headers:
+    content-type: application/json
+    user-agent: fetch-synthetic-monitor
+  body: '{"title": "foo", "body": "bar", "userId": 1}'
+
+- name: Valid PUT Request (JSONPlaceholder API)
+  url: https://jsonplaceholder.typicode.com/posts/1
+  method: PUT
+  headers:
+    content-type: application/json
+    user-agent: fetch-synthetic-monitor
+  body: '{"id": 1, "title": "updated title", "body": "updated body", "userId": 1}'
+
+- name: Valid DELETE Request (JSONPlaceholder API)
+  url: https://jsonplaceholder.typicode.com/posts/1
+  method: DELETE
+  headers:
+    user-agent: fetch-synthetic-monitor
+
+- name: Default GET Request
+  url: https://example.com/
+  headers:
+    user-agent: fetch-synthetic-monitor
